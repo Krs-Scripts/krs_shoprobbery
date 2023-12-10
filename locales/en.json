@@ -1,0 +1,13 @@
+{
+
+    "title_notify_robbery": "KRS SHOP ROBBERY",
+    "description_Robbery_cancelled": "Robbery cancelled",
+    "description_money_amount": "Robbery completed, money earned: ",
+    "title_blip": "Robbery",
+    "label_progress_lib": "Picking the lock of the safe",
+    "timer_robbery": "Robbery in progress: ",
+    "seconds_robbery": " seconds remaining",
+    "description_minigame": "The minigame failed, try again!",
+    "description_not_police": "There are not enough police",
+    "description_not_gun_robbery": "Brother, what do you think you can do a robbery with, with your hands?"
+}
