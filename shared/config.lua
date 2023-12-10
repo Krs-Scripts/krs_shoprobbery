@@ -3,6 +3,7 @@ lib.locale()
 Config = {}
 -- ROBBERY KRS --
 
+Config.MoneyType = 'black_money'
 Config.TimerBeforeNewRob  = 60 -- Tempo per startare di nuovo una rapina.
 Config.MaxDistance  = 200
 Config.DurationProgressLib = 10000 -- Durata della progress lib.

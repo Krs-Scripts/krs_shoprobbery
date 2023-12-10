@@ -139,7 +139,7 @@ for k, v in pairs(Config.ShopRobbery) do
                                         },
                                     }) then
                                         local playerPos = GetEntityCoords(playerPed)
-                                        TriggerServerEvent('krs_shoprobbery:robberyStarted', k, v.poliziotti, ESX.PlayerData.job)
+                                        TriggerServerEvent('krs_shoprobbery:robberyStarted', k, v.poliziotti, GetPlayerJob())
                                         -- dispatch
                                         TriggerServerEvent('notificaspolice')
                                     else

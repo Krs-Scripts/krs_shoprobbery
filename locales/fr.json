@@ -1,0 +1,12 @@
+{
+    "title_notify_robbery": "VOL DE LA BOUTIQUE KRS",
+    "description_Robbery_cancelled": "Vol annulé",
+    "description_money_amount": "Vol terminé, argent gagné : ",
+    "title_blip": "Vol",
+    "label_progress_lib": "Ouverture de la serrure du coffre-fort",
+    "timer_robbery": "Vol en cours : ",
+    "seconds_robbery": " secondes restantes",
+    "description_minigame": "Le mini-jeu a échoué, réessayez !",
+    "description_not_police": "Il n'y a pas assez de policiers",
+    "description_not_gun_robbery": "Frère, avec quoi penses-tu pouvoir faire un vol avec tes mains ?"
+}
