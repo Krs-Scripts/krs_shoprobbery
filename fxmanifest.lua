@@ -7,12 +7,12 @@ author 'Config#7804'
 version "1.0.0"
 
 client_scripts {
-    
+	'bridge/**/client.lua',
     'client/*.lua'
 }
 
 server_scripts {
-
+	'bridge/**/server.lua',
     'server/*.lua'
 }
 
