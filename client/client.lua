@@ -66,7 +66,8 @@ RegisterNetEvent('krs_shoprobbery:startTimer', function()
         while holdingUp do
             Citizen.Wait(3)
 
-            local dist = #(GetEntityCoords(PlayerPedId()) - robberyCoords)
+	    local playerPed = cache.ped
+            local dist = #(GetEntityCoords(playerPed) - robberyCoords)
             if dist > Config.MaxDistance then
                 holdingUp, store = false, ''
 
