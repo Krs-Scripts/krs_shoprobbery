@@ -1,7 +1,7 @@
 local holdingUp = false
 local store = ""
 local policeBlip = nil
-
+local robberyCoords = nil
 
 RegisterNetEvent('krs_shoprobbery:currentlyRobbing', function(currentStore)
 	holdingUp, store = true, currentStore
@@ -66,6 +66,17 @@ RegisterNetEvent('krs_shoprobbery:startTimer', function()
         while holdingUp do
             Citizen.Wait(3)
 
+            local dist = #(GetEntityCoords(PlayerPedId()) - robberyCoords)
+            if dist > Config.MaxDistance then
+                holdingUp, store = false, ''
+
+                lib.notify({
+                    title = locale('title_notify_robbery'),
+                    description = locale('description_Robbery_cancelled'),
+                    type = 'inform'
+                })
+            end
+
             if timer > 0 then
                 lib.showTextUI(locale('timer_robbery') .. timer .. locale('seconds_robbery'), {
                     position = Config.PositionTexUi,
@@ -119,7 +130,6 @@ for k, v in pairs(Config.ShopRobbery) do
 
                             if policeCount >= v.poliziotti then
                                 local success = lib.skillCheck({'easy', 'easy', { areaSize = 60, speedMultiplier = 2 }, 'easy'}, {'e', 'e', 'e', 'e'})
-
                                 if success then
                                     if lib.progressCircle({
                                         duration = Config.DurationProgressLib,
@@ -139,6 +149,7 @@ for k, v in pairs(Config.ShopRobbery) do
                                         },
                                     }) then
                                         local playerPos = GetEntityCoords(playerPed)
+                                        robberyCoords = v.position
                                         TriggerServerEvent('krs_shoprobbery:robberyStarted', k, v.poliziotti, ESX.PlayerData.job)
                                         -- dispatch
                                         TriggerServerEvent('notificaspolice')

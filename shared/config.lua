@@ -4,7 +4,7 @@ Config = {}
 -- ROBBERY KRS --
 
 Config.TimerBeforeNewRob  = 60 -- Tempo per startare di nuovo una rapina.
-Config.MaxDistance  = 200
+Config.MaxDistance  = 12
 Config.DurationProgressLib = 10000 -- Durata della progress lib.
 Config.PositionProgress = 'middle' -- Posizione della progress lib.
 Config.animDict = "mp_arresting" -- Animation.
